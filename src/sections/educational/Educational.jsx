@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './Educational.module.css'
 
-export const Educational = () => {
+export default Educational = () => {
   return (
     <div>Educational</div>
   )
