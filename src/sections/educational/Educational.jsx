@@ -1,8 +1,10 @@
 import React from 'react'
 import styles from './Educational.module.css'
 
-export default Educational = () => {
+const Educational = () => {
   return (
     <div>Educational</div>
   )
 }
+
+export default Educational
