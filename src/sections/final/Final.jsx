@@ -20,6 +20,38 @@ const Final = () => {
   const [popis__prace, setPopis__prace] = useState('');
 
   useEffect(() => {
+    ////////////////////////////////////
+    
+    const submitReset = (e) => {
+      e.preventDefault();
+      setMeno("");
+      setPriezvisko("");
+      setAdresa("");
+      setTelcislo("");
+      setPopis("");
+      setEmail("");
+
+      setEducationNazov("");
+      setEducationSkola("");
+
+      setPraca("");
+      setPopis__prace("");
+
+      const container = document.getElementById("eduaction_append");
+      container.innerHTML = '';
+
+      const containerr = document.getElementById("practical__append");
+      containerr.innerHTML = '';
+    };
+
+    const submitResetButton =
+      document.getElementById("reset");
+    if (submitResetButton) {
+      submitResetButton.addEventListener("click", submitReset);
+    }
+
+    /////////////////////////////////////
+
     const submit_button = document.getElementById("submit-values");
 
     submit_button.addEventListener("click", (e) => {
@@ -75,6 +107,9 @@ const Final = () => {
         // remove the event listener when the component unmounts
         if (submitPracticalButton) {
           submitPracticalButton.removeEventListener("click", submitPractical);
+        }
+        if (submitResetButton) {
+          submitResetButton.removeEventListener("click", submitReset);
         }
       };
   }, []);

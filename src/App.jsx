@@ -16,7 +16,7 @@ function App() {
 
       <Practical />
       <div className={styles.buttonreset}>
-        <button className={styles.buttonreset}>RESET</button>
+        <button id='reset' className={styles.buttonreset}>RESET</button>
       </div>
 
       <Final />
