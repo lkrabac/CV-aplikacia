@@ -1,0 +1,58 @@
+button, input, textarea {
+    border: none;
+    outline: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 80px 0 0 0;
+}
+
+.container {
+    background-color: #e3e0cf;
+
+    border-radius: 4px;
+
+    width: 75%;
+    padding: 0 0 20px 0;
+}
+
+.container h2 {
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 30px 0 30px;
+}
+
+.form h3 {
+    font-size: 1rem;
+    font-weight: 400;
+
+    margin: 0 0 0 2px;
+}
+
+.popis {
+    height: 80px;
+}
+
+input, textarea {
+    margin: 0 0 5px 0;
+    background-color: #9fa8a3;
+
+    border: 0px solid #9fa8a3;
+    border-radius: 4px;
+    padding: 0.5rem 2rem 0.5rem 0.5rem;
+}
+
+.submit {
+    color: white;
+}
