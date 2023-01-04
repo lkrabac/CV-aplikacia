@@ -16,6 +16,9 @@ const Final = () => {
   const [education_nazov, setEducationNazov] = useState('');
   const [education_skola, setEducationSkola] = useState('');
 
+  const [pracap, setPraca] = useState('');
+  const [popis__prace, setPopis__prace] = useState('');
+
   useEffect(() => {
     const submit_button = document.getElementById("submit-values");
 
@@ -45,13 +48,35 @@ const Final = () => {
       submitEducationButton.addEventListener("click", submitEducation);
     }
 
-    return () => {
-      // remove the event listener when the component unmounts
-      if (submitEducationButton) {
-        submitEducationButton.removeEventListener("click", submitEducation);
-      }
-    };
+        const submitPractical = (e) => {
+          e.preventDefault();
+          setPraca(document.getElementById("praca").value);
+          setPopis__prace(document.getElementById("popis__prace").value);
 
+          const container = document.getElementById("practical__append");
+          console.log(container);
+          container.innerHTML += `<ul><li><strong>${
+            document.getElementById("praca").value
+          }</strong></li><li><small>${
+            document.getElementById("popis__prace").value
+          }</small></li></ul>`;
+        };
+
+        const submitPracticalButton =
+          document.getElementById("submit-practical");
+        if (submitPracticalButton) {
+          submitPracticalButton.addEventListener("click", submitPractical);
+        }
+      return () => {
+        // remove the event listener when the component unmounts
+        if (submitEducationButton) {
+          submitEducationButton.removeEventListener("click", submitEducation);
+        }
+        // remove the event listener when the component unmounts
+        if (submitPracticalButton) {
+          submitPracticalButton.removeEventListener("click", submitPractical);
+        }
+      };
   }, []);
 
   
@@ -81,13 +106,8 @@ const Final = () => {
           </div>
           <div className={`${styles.work} ${styles.body__border__top}`}>
             <h4>{praca.toUpperCase()}</h4>
-            <div className={`${styles.work__text}`}>
-              <h3>Software Engineer</h3>
-              <p>
-                Ut fugiat minim qui voluptate culpa. Elit nostrud ex ad
-                incididunt incididunt eiusmod. Officia cupidatat culpa commodo
-                nisi nostrud.
-              </p>
+            <div id="practical__append"className={`${styles.work__text}`}>
+              
             </div>
           </div>
         </div>

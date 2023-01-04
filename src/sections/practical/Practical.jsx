@@ -16,7 +16,7 @@ const Practical = () => {
           />
           <h3>Krátky popis práce</h3>
           <textarea id="popis__prace" type="text" placeholder="..." />
-          <button id="submit-education" className={styles.submit}>
+          <button id="submit-practical" className={styles.submit}>
             Pridať do zoznamu
           </button>
         </form>
