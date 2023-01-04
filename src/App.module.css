@@ -1,0 +1,9 @@
+.buttonreset button{
+  color: white;
+  width: 200px;
+}
+
+.buttonreset {
+  display: flex;
+  justify-content: center;
+}

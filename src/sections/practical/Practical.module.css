@@ -11,7 +11,7 @@ button, input, textarea {
     justify-content: center;
     align-items: center;
 
-    margin: 80px 0 0 0;
+    margin: 80px 0 80px 0;
 }
 
 .container {
